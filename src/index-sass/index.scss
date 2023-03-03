@@ -1,0 +1,44 @@
+@use 'sass:math';
+
+@import "../Global-sass/function";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-width: rem(375);
+}
+
+
+
+h1{
+    font-family: 'Cutive', serif;
+}
+
+.App{
+    height: 100vh;
+}
+
+.App.darkMode{
+    background-color: blue;
+}
+.lightMode-title, .darkMode-title{
+    padding: 1rem 0;
+    font-size: rem(24);
+}
+
+.todo-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.tasks-container{
+    width: 90%;
+    margin: 0 auto;
+}

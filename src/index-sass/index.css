@@ -1,1 +1,39 @@
-/*# sourceMappingURL=index.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 23.4375rem;
+}
+
+h1 {
+  font-family: "Cutive", serif;
+}
+
+.App {
+  height: 100vh;
+}
+
+.App.darkMode {
+  background-color: blue;
+}
+
+.lightMode-title, .darkMode-title {
+  padding: 1rem 0;
+  font-size: 1.5rem;
+}
+
+.todo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.tasks-container {
+  width: 90%;
+  margin: 0 auto;
+}/*# sourceMappingURL=index.css.map */

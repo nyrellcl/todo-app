@@ -1,12 +1,48 @@
 import React from 'react'
+import {FaCheck, FaRegTimesCircle} from 'react-icons/fa'
 
 function Task({task, tasks, setTasks, index, dark}) {
+  
   const handleComplete = e =>{
     e.preventDefault()
-    
+    let newTasks = [...tasks];
+    newTasks[index].completed = !newTasks[index].completed;
+    setTasks(newTasks)
   }
+
+  const saveToLocal = (taskName, data) => {
+    localStorage.setItem(taskName, JSON.stringify(data))
+  }
+
+  const handleRemove = e =>{
+    e.preventDefault();
+    let newTasks = [...tasks];
+    newTasks.splice(index, 1);
+    setTasks(newTasks);
+    saveToLocal('myTodoTask', newTasks)
+  }
+
   return (
-    <div>Task</div>
+    <article className={`task-container ${dark ? 'dark': 'light'}`}>
+      <div className={`task-container__box ${dark ? 'dark' : 'light'}`}>
+        <h2 style={{textDecoration: task.completed ? 'strikethrough' : null}} className={`task-container__box__title ${dark ? 'dark' : 'light'}`}>
+          {task.title}
+        </h2>
+        <p style={{textDecoration: task.completed ? 'strikethrough' : null}} className={`task-container__box__description ${dark ? 'dark' : 'light'}`}>
+          {task.description}
+        </p>
+      </div>
+
+      <div className={`box-task-btn-group ${dark ? 'dark' : 'light'}`}>
+        <button type="button" onClick={handleComplete} className={`complete-btn ${dark ? 'dark' : 'light'}`}>
+          <FaCheck/>
+        </button>
+
+        <button type='button' onClick={(e) => handleRemove(e)} className={`remove-btn ${dark? 'dark' : 'light'}`}>
+          <FaRegTimesCircle/>
+        </button>
+      </div>
+    </article>
   )
 }
 
