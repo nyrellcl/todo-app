@@ -17,7 +17,7 @@ function App() {
     <article className="todo-container">
       <h1 className={dark ? 'darkMode-title' : 'lightMode-title'}>To-Do App</h1>
       <aside className="mode-container">
-        <input type='checkbox' id="mode-switch" checked={dark} onChange={() => setDark(!dark)} />
+        <input className="mode-switcher" type='checkbox' id="mode-switch" checked={dark} onChange={() => setDark(!dark)} />
       </aside>
 
     </article>
