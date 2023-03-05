@@ -1,7 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import TodoContext from "../../TodoContext";
 import Task from "../Task/Task";
 
-function TaskContainer({ tasks, setTasks, dark }) {
+function TaskContainer() {
+    
+  const { tasks, setTasks, dark } = useContext(TodoContext);
+
   const [todo, setTodo] = useState({
     completed: false,
     title: "",
@@ -12,7 +16,7 @@ function TaskContainer({ tasks, setTasks, dark }) {
     //prevents form from being automaticall submitted on render
     e.preventDefault();
     if (todo.title) {
-      let newTask = {...todo};
+      let newTask = { ...todo };
       let newTasks = [...tasks, newTask];
       setTasks(newTasks);
       setTodo({
@@ -58,7 +62,17 @@ function TaskContainer({ tasks, setTasks, dark }) {
 
       <article className={dark ? "dark-task-box" : "light-task-box"}>
         {tasks.map((task, taskIdx) => {
-          return <Task task={task} tasks={tasks} setTasks={setTasks} index={taskIdx} dark={dark} key={taskIdx} /> })}
+          return (
+            <Task
+              task={task}
+              tasks={tasks}
+              setTasks={setTasks}
+              index={taskIdx}
+              dark={dark}
+              key={taskIdx}
+            />
+          );
+        })}
       </article>
     </section>
   );

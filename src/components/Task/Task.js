@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import {FaCheck, FaRegTimesCircle} from 'react-icons/fa'
+import TodoContext from '../../TodoContext'
 
-function Task({task, tasks, setTasks, index, dark}) {
+function Task({task, index}) {
+
+  const {tasks, setTasks, dark } = useContext(TodoContext)
   
   const handleComplete = e =>{
     e.preventDefault()

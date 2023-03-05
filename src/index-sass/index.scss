@@ -135,6 +135,7 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 1rem;
     &__title.light {
       color: $light-headings;
     }

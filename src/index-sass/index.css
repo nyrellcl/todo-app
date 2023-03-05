@@ -131,6 +131,7 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 1rem;
 }
 .task-area__box__title.light {
   color: #2b3442;
