@@ -1,44 +1,171 @@
-@use 'sass:math';
+@use "sass:math";
 
-@import "../Global-sass/function";
+@import "../Global-sass/function", "../Global-sass/colors";
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    min-width: rem(375);
+body {
+  min-width: rem(375);
 }
 
-
-
-h1{
-    font-family: 'Cutive', serif;
+h1,
+h2,
+p {
+  font-family: "Ubuntu", sans-serif;
 }
 
-.App{
-    height: 100vh;
+.App {
+  height: 100vh;
+  background-color: $light-bg-main;
 }
 
-.App.darkMode{
-    background-color: blue;
-}
-.lightMode-title, .darkMode-title{
-    padding: 1rem 0;
-    font-size: rem(24);
+.App.darkMode {
+  background-color: $dark-bg-main;
 }
 
-.todo-container{
+.lightMode-title,
+.darkMode-title {
+  padding: 1rem 0;
+  font-size: rem(40);
+}
+
+.darkMode-title {
+  color: $dark-text;
+}
+
+.dark-task-box,
+.light-task-box {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.dark-task-box {
+  background-color: $dark-bg-main;
+  .task-area.dark{
+      background-color: $dark-bg-card;
+  }
+}
+.light-task-box {
+    .task-area.light{
+        background-color: $light-bg-cards;
+
+    }
+}
+
+.switch.sun-btn,
+.switch.moon-btn {
+  position: absolute;
+  top: 15%;
+}
+
+.switch.moon-btn {
+  color: $light-hue-1;
+  display: flex;
+  align-items: center;
+  left: 5%;
+}
+
+.switch.sun-btn {
+  right: 5%;
+  color: $light-hue-2;
+}
+
+.strikethrough {
+  text-decoration: line-through;
+}
+
+.todo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.tasks-container {
+  width: 90%;
+  margin: 0 auto;
+  &__form {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    flex-direction: column;
     gap: 1rem;
+    .task-title,
+    .task-description {
+      padding: 1rem;
+      width: 100%;
+      font-size: rem(18);
+      border-radius: rem(8);
+      letter-spacing: rem(1);
+      border: 1px solid #262727;
+    }
+    .task-btn{
+        width: rem(150);
+        height: rem(50);
+        border-radius: rem(10);
+        border:none;
+        background-color: $btn-color;
+        cursor: pointer;
+        font-size: rem(18);
+        letter-spacing: rem(1);
+        color: #ffff;
+        font-weight: 700;
+    }
+  }
 }
 
-.tasks-container{
-    width: 90%;
-    margin: 0 auto;
+.dark-task-box,.light-task-box{
+    margin-top: 4rem;
+}
+
+.task-area {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-radius: rem(10);
+  &__box {
+      display: flex; 
+      flex-direction: column;
+      justify-content: center;
+    &__title.light {
+      color: $light-headings;
+    }
+    &__description.light {
+      color: $light-descriptions;
+    }
+    &__title.dark,
+    &__description.dark {
+      color: $dark-text;
+    }
+  }
+  .box-task-btn-group{
+      display: flex;
+      flex-direction: column;
+      gap:1rem;
+      margin-left: auto;
+      margin-right: 1rem;
+      .remove-btn, .complete-btn{
+          width: rem(55);
+          height: rem(45);
+          border-radius: rem(8);
+          border: none;
+          font-size: rem(20);
+        }
+      .remove-btn{
+          background-color: $btn-remove;
+          color: #ffff;
+      }
+      .complete-btn{
+          background-color: $btn-complete;
+          color: #262727;
+      }
+  }
 }

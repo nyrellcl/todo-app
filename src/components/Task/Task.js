@@ -23,12 +23,12 @@ function Task({task, tasks, setTasks, index, dark}) {
   }
 
   return (
-    <article className={`task-container ${dark ? 'dark': 'light'}`}>
-      <div className={`task-container__box ${dark ? 'dark' : 'light'}`}>
-        <h2 style={{textDecoration: task.completed ? 'strikethrough' : null}} className={`task-container__box__title ${dark ? 'dark' : 'light'}`}>
+    <article className={`task-area ${dark ? 'dark': 'light'}`}>
+      <div className={`task-area__box ${dark ? 'dark' : 'light'}`}>
+        <h2 style={{textDecoration: task.completed ? 'line-through' : null}} className={`task-area__box__title ${dark ? 'dark' : 'light'}`}>
           {task.title}
         </h2>
-        <p style={{textDecoration: task.completed ? 'strikethrough' : null}} className={`task-container__box__description ${dark ? 'dark' : 'light'}`}>
+        <p style={{textDecoration: task.completed ? 'line-through' : null}} className={`task-area__box__description ${dark ? 'dark' : 'light'}`}>
           {task.description}
         </p>
       </div>
