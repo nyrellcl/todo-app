@@ -14,6 +14,7 @@ Welcome! This is my to-do list app that I created using React as the front-end f
 - Jack Herrington on Youtube for React Resources [https://www.youtube.com/channel/UC6vRUjYqDuoUsYsku86Lrsw]
 - React JS [https://reactjs.org/]
 - React Switch [https://www.npmjs.com/package/react-switch]
+- UX Design Insight [https://uxdesign.cc/the-light-and-the-dark-side-creating-a-ui-colour-system-in-3-steps-41818c5bdb60]
 - SASS (CSS-preprocesser) - [https://sass-lang.com/documentation/]
 
 # Concepts Learned
