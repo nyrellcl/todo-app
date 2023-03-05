@@ -65,7 +65,7 @@ p {
 }
 
 .switch.moon-btn {
-  color: #f2ad73;
+  color: white;
   display: flex;
   align-items: center;
   left: 5%;
@@ -73,7 +73,6 @@ p {
 
 .switch.sun-btn {
   right: 5%;
-  color: #ffa345;
 }
 
 .strikethrough {
@@ -149,7 +148,8 @@ p {
   margin-left: auto;
   margin-right: 1rem;
 }
-.task-area .box-task-btn-group .remove-btn, .task-area .box-task-btn-group .complete-btn {
+.task-area .box-task-btn-group .remove-btn,
+.task-area .box-task-btn-group .complete-btn {
   width: 3.4375rem;
   height: 2.8125rem;
   border-radius: 0.5rem;
@@ -167,7 +167,8 @@ p {
 }
 
 @media only screen and (min-width: 1200px) {
-  .dark-task-box, .light-task-box {
+  .dark-task-box,
+.light-task-box {
     flex-wrap: wrap;
   }
   .tasks-container__form {
@@ -183,10 +184,12 @@ p {
   .tasks-container__form .task-btn:active {
     transform: translateY(5px);
   }
-  .box-task-btn-group .remove-btn, .box-task-btn-group .complete-btn {
+  .box-task-btn-group .remove-btn,
+.box-task-btn-group .complete-btn {
     transition: all 250ms ease-in;
   }
-  .box-task-btn-group .remove-btn:active, .box-task-btn-group .complete-btn:active {
+  .box-task-btn-group .remove-btn:active,
+.box-task-btn-group .complete-btn:active {
     transform: translateY(5px);
   }
   .box-task-btn-group .remove-btn:hover {

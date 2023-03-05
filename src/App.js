@@ -19,13 +19,16 @@ function App() {
     <section className={dark ? "App darkMode" : "App"}>
       <article className="todo-container">
         <h1 className={dark ? "darkMode-title" : "lightMode-title"}>
-          To-Do App
+          To-Do List
         </h1>
         <Switch
           className="switch"
           id="mode-switch"
           checked={dark}
           onChange={() => setDark(!dark)}
+          onColor="#141d2f"
+          offColor="#f6f8ff"
+          offHandleColor="#141d2f"
           uncheckedIcon={
             <div className="switch sun-btn">
               <FaSun size={18} />
