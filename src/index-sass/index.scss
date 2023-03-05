@@ -46,8 +46,7 @@ p {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin-top: 4rem;
-  height: rem(400);
+  height: rem(350);
   overflow-y: scroll;
 }
 
@@ -102,6 +101,7 @@ p {
     justify-content: space-between;
     flex-direction: column;
     gap: 1rem;
+    padding-bottom: 4rem;
     .task-title,
     .task-description {
       padding: 1rem;
