@@ -45,8 +45,10 @@ p {
 .light-task-box {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   gap: 1rem;
+  margin-top: 4rem;
+  height: rem(400);
+  overflow-y: scroll;
 }
 
 .dark-task-box {
@@ -126,9 +128,6 @@ p {
   }
 }
 
-.dark-task-box,.light-task-box{
-    margin-top: 4rem;
-}
 
 .task-area {
     display: flex;
@@ -176,10 +175,15 @@ p {
 }
 
 @media only screen and (min-width: 1200px){
+    .dark-task-box, .light-task-box{
+        flex-wrap: wrap;
+    }
     .tasks-container{
         &__form{
+            flex-direction: row;
             .task-btn{
                 transition: all 250ms ease-in;
+                width: rem(300);
                 &:hover{
                     filter: brightness(1.3);
                 }

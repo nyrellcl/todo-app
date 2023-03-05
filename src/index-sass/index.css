@@ -41,8 +41,10 @@ p {
 .light-task-box {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   gap: 1rem;
+  margin-top: 4rem;
+  height: 25rem;
+  overflow-y: scroll;
 }
 
 .dark-task-box {
@@ -120,10 +122,6 @@ p {
   font-weight: 700;
 }
 
-.dark-task-box, .light-task-box {
-  margin-top: 4rem;
-}
-
 .task-area {
   display: flex;
   align-items: center;
@@ -169,8 +167,15 @@ p {
 }
 
 @media only screen and (min-width: 1200px) {
+  .dark-task-box, .light-task-box {
+    flex-wrap: wrap;
+  }
+  .tasks-container__form {
+    flex-direction: row;
+  }
   .tasks-container__form .task-btn {
     transition: all 250ms ease-in;
+    width: 18.75rem;
   }
   .tasks-container__form .task-btn:hover {
     filter: brightness(1.3);
