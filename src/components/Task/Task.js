@@ -9,11 +9,6 @@ function Task({task, tasks, setTasks, index, dark}) {
     newTasks[index].completed = !newTasks[index].completed;
     setTasks(newTasks)
   }
-
-  const saveToLocal = (taskName, data) => {
-    localStorage.setItem(taskName, JSON.stringify(data))
-  }
-
   const handleRemove = e =>{
     e.preventDefault();
     let newTasks = [...tasks];
@@ -21,6 +16,11 @@ function Task({task, tasks, setTasks, index, dark}) {
     setTasks(newTasks);
     saveToLocal('myTodoTask', newTasks)
   }
+
+  const saveToLocal = (taskName, data) => {
+    localStorage.setItem(taskName, JSON.stringify(data))
+  }
+
 
   return (
     <article className={`task-area ${dark ? 'dark': 'light'}`}>
