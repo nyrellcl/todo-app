@@ -114,6 +114,28 @@ p {
   color: #262727;
 }
 
+.edit-task-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+.edit-task-container input {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 0.0625rem solid #262727;
+}
+.edit-task-container .save-btn {
+  background-color: #0079ff;
+  border: none;
+  color: white;
+  font-weight: 700;
+  font-family: "Ubuntu", sans-serif;
+  padding: 0.625rem;
+  border-radius: 0.5rem;
+  letter-spacing: 0.0625rem;
+}
+
 .todo-container {
   display: flex;
   flex-direction: column;

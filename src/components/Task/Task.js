@@ -63,7 +63,7 @@ function Task({ task, index }) {
           </p>
         </div>
       ) : (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className='edit-task-container'>
           <input
             type="text"
             name="title"
@@ -76,7 +76,7 @@ function Task({ task, index }) {
             value={editedTask.description}
             onChange={handleChange}
           />
-          <button type="submit">Save</button>
+          <button className='save-btn' type="submit">Save</button>
         </form>
       )}
 

@@ -105,16 +105,39 @@ p {
   color: #262727;
 }
 
-.edit-btn{
+.edit-btn {
   background-color: transparent;
 }
 
-.edit-btn.dark{
+.edit-btn.dark {
   color: #ffff;
 }
 
-.edit-btn.light{
+.edit-btn.light {
   color: #262727;
+}
+
+.edit-task-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  input{
+    padding: 0.5rem;
+    border-radius: rem(8);
+    border: rem(1) solid #262727;
+  }
+  .save-btn{
+    background-color: $btn-color;
+    border: none;
+    color: #ffff;
+    font-weight: 700;
+    font-family: 'Ubuntu', sans-serif;
+    padding: rem(10);
+    border-radius: rem(8);
+    letter-spacing: rem(1);
+    
+  }
 }
 
 .todo-container {
