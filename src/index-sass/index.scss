@@ -217,6 +217,8 @@ p {
   .dark-task-box,
   .light-task-box {
     flex-wrap: wrap;
+    flex-direction: row;
+    overflow: visible;
   }
   .tasks-container {
     &__form {
