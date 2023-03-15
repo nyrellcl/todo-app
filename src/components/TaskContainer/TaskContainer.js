@@ -3,7 +3,6 @@ import TodoContext from "../../TodoContext";
 import Task from "../Task/Task";
 
 function TaskContainer() {
-    
   const { tasks, setTasks, dark } = useContext(TodoContext);
 
   const [todo, setTodo] = useState({
@@ -31,6 +30,8 @@ function TaskContainer() {
   const handleChange = (e) => {
     setTodo({ ...todo, [e.target.name]: e.target.value });
   };
+
+
   return (
     <section className="tasks-container">
       <form
@@ -61,18 +62,7 @@ function TaskContainer() {
       </form>
 
       <article className={dark ? "dark-task-box" : "light-task-box"}>
-        {tasks.map((task, taskIdx) => {
-          return (
-            <Task
-              task={task}
-              tasks={tasks}
-              setTasks={setTasks}
-              index={taskIdx}
-              dark={dark}
-              key={taskIdx}
-            />
-          );
-        })}
+        {tasks.map((task, taskIdx) => {return (<Task task={task} tasks={tasks} setTasks={setTasks} index={taskIdx} dark={dark} key={taskIdx} />);})}
       </article>
     </section>
   );
