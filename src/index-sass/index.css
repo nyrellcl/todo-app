@@ -214,6 +214,11 @@ p {
     flex-wrap: wrap;
     flex-direction: row;
     overflow: visible;
+    width: 100%;
+  }
+  .dark-task-box .task-area,
+.light-task-box .task-area {
+    width: auto;
   }
   .tasks-container__form {
     flex-direction: row;
