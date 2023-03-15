@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { FaCheck, FaRegTimesCircle } from "react-icons/fa";
+import { FaCheck, FaRegTimesCircle, FaEdit } from "react-icons/fa";
 import TodoContext from "../../TodoContext";
 
 function Task({ task, index }) {
@@ -97,8 +97,8 @@ function Task({ task, index }) {
           <FaRegTimesCircle />
         </button>
 
-        <button type="button" onClick={() => handleEdit(index)}>
-          Edit
+        <button type="button" className={`edit-btn ${dark? 'dark' : 'light'}`} onClick={() => handleEdit(index)}>
+          <FaEdit/>
         </button>
       </div>
     </article>
