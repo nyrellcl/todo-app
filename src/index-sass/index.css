@@ -240,4 +240,19 @@ p {
   .box-task-btn-group .complete-btn.dark:hover {
     filter: brightness(1.3);
   }
+  .edit-task-container {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .edit-task-container input {
+    width: 100%;
+    padding: 1rem;
+  }
+  .edit-task-container .save-btn {
+    padding: 1rem 1.5rem;
+  }
+  .edit-task-container .save-btn:hover {
+    cursor: pointer;
+    filter: brightness(1.3);
+  }
 }/*# sourceMappingURL=index.css.map */

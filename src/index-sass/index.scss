@@ -253,4 +253,20 @@ p {
       }
     }
   }
+
+  .edit-task-container{
+    width: 90%;
+    margin: 0 auto;
+    input{
+      width: 100%;
+      padding: 1rem;
+    }
+    .save-btn{
+      padding: 1rem 1.5rem;
+      &:hover{
+        cursor: pointer;
+        filter: brightness(1.3);
+      }
+    }
+  }
 }
