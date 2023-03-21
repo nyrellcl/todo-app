@@ -222,6 +222,9 @@ p {
     width: 100%;
     .task-area{
       width: auto;
+      display: flex;
+      align-items: center;
+      gap: 3.5rem;
     }
   }
   .tasks-container {
